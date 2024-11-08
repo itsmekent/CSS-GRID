@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #a7a7a7;  
+    color: #525050;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #d35a5a;
+    padding: 1em;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #a8b0b1;
+    border-radius: 5px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('https://images5.alphacoders.com/815/815709.jpg') no-repeat center center/cover; 
+    color: rgb(187, 187, 187);
+    text-align: center;
+    padding: 0 2em;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero h1,
+.hero p,
+.cta-button {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5em;
+    max-width: 600px;
+}
+
+.cta-button {
+    padding: 0.8em 1.5em;
+    background-color: #d9534f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c9302c;
+}
+
+.container {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+    color: #b10808;
+}
+
+.container p{
+    color: #000000;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4em 2em;
+    color: rgb(105, 105, 105);
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+/* Grid Layout for Products, Employees, and Profiles */
+.products, .employee-cards, .student-profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+    justify-items: center;
+}
+
+.product-card, .employee-card, .student-profile, .testimonial-card {
+    background-color: rgb(231, 155, 55);
+    border: 10px solid rgb(2, 2, 2); 
+    border-radius: 8%;
+    padding: 1.5em;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.product-card img, .employee-card img, .student-profile img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card:hover, .employee-card:hover, .student-profile:hover, .testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card h3, .employee-card h3, .student-profile h3 {
+    font-size: 1.2rem;
+    margin: 0.5em 0;
+    color: #000000;
+}
+
+.product-card p, .employee-card p, .student-profile p {
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    margin: 1em 0;
+}
+
+.contact-info p {
+    margin: 0.5em 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2em auto;
+    max-width: 600px;
+    color: white; 
+}
+
+.contact-form {
+    margin: 2em 0;
+    max-width: 600px;
+    margin: 2em auto;
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #999;
+}
+
+button[type="submit"] {
+    background-color: #d9534f;
+    border: none;
+    padding: 0.8em 1.5em;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #c9302c;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+    font-size: 0.9rem;
+}
